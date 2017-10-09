@@ -1,0 +1,44 @@
+Utilizing the ENSO Driven Variation in Hydroclimatic Variables to Predict Seasonal Tornado Frequency
+Undergraduate Research Assistant: Junior Quintero
+Advisor: Brian Zimmerman
+ABSTRACT
+	There is a significant danger that threatens the residents of the Midwest, as they are located in the region with the highest tornado frequency in the country. Yet there is considerable variation year to year in the actual number of tornadoes. Past studies that utilize composite analysis based on El Nino Southern Oscillation (ENSO) potentially overlook within phase variations, which can be significant. However, the Nino Phase Index Analysis (NIPA) has shown potential at predicting within phase variance that goes missed by composite analysis. The proposed research will implement a variation of the NIPA to create a probabilistic forecast of tornado formation. The effectiveness of this method will be evaluated by comparing it with a composite analysis baseline. This implementation of NIPA to generate predictions for tornado frequency has potential to yield new opportunities for improving and extending the forecasts of extreme weather events, benefitting both residents and businesses that insure them.
+  
+MOTIVATION
+Seasonal tornado frequency prediction presence has not received much attention, largely because tornadoes form from supercell thunderstorms, which themselves are very unpredictable beyond a few days time (NOAA). Tornadoes develop quickly and are even less predictable. Currently there are no official seasonal forecasts issued for tornadoes; the National Weather Service Forecast Office issues warnings once a Tornado has been sighted or indicated by weather radar (NOAA). El Nino Southern Oscillation (ENSO) is understood to affect many hydroclimatic variables on the seasonal time scale- and indeed current seasonal severe storm and tornado forecasts are based off of composite analysis of ENSO phases (Johnson, 1993). However, Zimmerman et al (2016) shows that composite analysis can overlook significant within-phase variance of hydroclimatic variables on the seasonal timescale. In the proposed work we will investigate within-phase variance of variables affecting Tornado formation. Hopefully we can improve tornado frequency forecasts and increase predictability so that residents in a threatened area can take proper safety measures, and also assist insurers who cover damage from natural disasters. 
+
+PRIOR WORK
+The focus of my research thus far has been to evaluate the impact of the El Nino Southern Oscillation (ENSO) on the distribution of daily precipitation. The ENSO begins with above average sea surface temperatures off the west coast of South America, extending west towards Australia. This anomaly unfolds a wide range of climate changes across the globe (Ropelewski and Halpert, 1986). Past studies have relied on composite analysis which looks into the mean of the data records for a hydroclimatic variable. Larkin and Harrison (2005) have shown that simply analyzing the mean of a hydroclimatic variable over a set of years can still be misleading (Larkin and Harrison, 2005), i.e., the amount of seasonal precipitation can still vary greatly within a particular phase of the ENSO. The Nino Index Phase Analysis (NIPA), developed by Zimmerman et al (2016), has shown potential in being able to predict this within phase variance that would otherwise go ignored in a composite analysis. This implies that current composite analysis is limiting the predictability of the effect of the ENSO variations on our climate and weather systems.
+Over the past several months, I have developed the tools necessary to look at within phase variations of the distribution of daily precipitation during phases of the ENSO, as opposed to seasonal totals. Using tools built to work with the NIPA methodology, we can observe within phase variations for the possible distribution of hydroclimatic variables, such as precipitation and temperature – however, the methodology is flexible enough to extend to other areas of interest, such as tornado frequency. The proposed research will implement a variation of the NIPA to generate a probabilistic forecast of extreme weather events based on an analysis of historical data, with a particular focus on tornado frequency.
+
+METHODS
+In order to complete the proposed research I will need to make adjustments to the tools I have made for the ENSO analysis so that I can analyze the variables that are associated with Tornado formation. Then I will use historical data from each of the 9 U.S. climate regions to create a database of tornado events. I will perform a simple composite analysis per region by the ENSO phase for a baseline comparison. For the extreme weather events, I will develop prediction models conditioned on the within phase variance of the ENSO. This will take the form of a Poisson distribution - these distributions are used to estimate the frequency of certain types of events, and have only one parameter - the rate parameter (Wilks, 2006). The rate parameter can be be allowed to vary by year if some additional information is known - here we will utilize the predictors generated by NIPA in Zimmerman et al (2016). This will effectively condition the rate parameter on both the state of ENSO and the within-phase variability of ENSO. Finally, ‘hindcasts’ will be generated for the different types of extreme weather events in each climate region and then compared to the baseline composite analysis. A brief summary is presented below.
+Create regional tornado database from historical records
+Perform baseline composite analysis (verify against Johnson(1993))
+Modify NIPA methodology to generate predictions for the rate parameter of a Poisson distribution to characterize tornado frequency in the upcoming season
+Evaluate the methodology using hindcasting techniques and comparing to the historical record
+
+CONCLUSION
+By acknowledging within-phase ENSO variations and avoiding composite analysis, doors can be unlocked for many other variations, not only in the hydroclimatic variables, but potentially in other severe weather anomalies such as tornadoes. Forecasts could be extended, allowing people to be better prepared for these types of extreme events. Also, this will help insurance companies better allocate scarce resources as climate change intensifies extreme weather systems (Allan, 2008). 
+This project looks to use a repurposed NIPA program to shine a new light on tornadoes, and the large scale atmospheric conditions that are favorable for their formation.Ideally this project will uncover information that can improve seasonal predictability for these types of disastrous weather phenomena. 
+
+REFERENCES
+
+"Severe Weather 101." National Severe Storms Laboratory. NOAA, n.d. Web. 20 Feb. 2016. <http://www.nssl.noaa.gov/education/svrwx101/tornadoes/forecasting/> 
+
+"Flood Basics." National Severe Storms Laboratory. NOAA, n.d. Web. 17 Feb. 2016. <http://www.nssl.noaa.gov/education/svrwx101/floods/> 
+
+"The Online Tornado FAQ (by Roger Edwards, SPC)." The Online Tornado FAQ (by Roger Edwards, SPC). NOAA, n.d. Web. 21 Feb. 2016. <http://www.spc.noaa.gov/faq/tornado/> 
+
+Kevin M. Simmons and Daniel Sutter, 2008: Tornado warnings, lead times, and tornado casualties: an empirical investigation. Wea. Forecasting, 23, 246–258.
+doi: http://dx.doi.org/10.1175/2007WAF2006027.1
+
+Johnson, J. (1993) The “Short Fuse” Composite: an Operational Analysis Technique for Tornado Forecasting, in The Tornado: Its Structure, Dynamics, Prediction, and Hazards (eds C. Church, D. Burgess, C. Doswell and R. Davies-Jone), American Geophysical Union, Washington, D. C.. doi: 10.1029/GM079p0605
+
+Ropelewski, Chester F., and Michael S. Halpert. "North American precipitation and temperature patterns associated with the El Niño/Southern Oscillation (ENSO)." Monthly Weather Review 114.12 (1986): 2352-2362
+
+Wilks, Daniel S. Statistical methods in the atmospheric sciences. Vol. 100. Academic press, 2011
+
+Zimmerman, Brian. G, Daniel J. Vimont, Paul J. Block, 2016: Utilizing the State of ENSO to assist in season-ahead predictor selection. Water Resources Research, in review.
+
+Allan, Richard P., and Brian J. Soden. "Atmospheric warming and the amplification of precipitation extremes." Science 321.5895 (2008): 1481-1484.
