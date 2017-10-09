@@ -1,0 +1,33 @@
+Utilizing the ENSO Driven Variation in Hydroclimatic Variables to Predict Seasonal Tornado Frequency
+Undergraduate Research Assistant: Junior Quintero
+Advisor: Brian Zimmerman
+
+The focus of my research thus far has been to evaluate the impact of the El Nino Southern Oscillation (ENSO) on the distribution of daily precipitation. ENSO begins with above average sea surface temperatures off the west coast of South America, extending west towards Australia. This anomaly unfolds a wide range of climate changes across the globe (Ropelewski and Halpert, 1986). Past studies have relied on composite analysis which looks into the mean of the data records for a hydroclimatic variable. Larkin and Harrison (2005) have shown that simply analyzing the mean of a hydroclimatic variable over a set of years can still be misleading (Larkin and Harrison, 2005), i.e., the amount of seasonal precipitation can still vary greatly within a particular phase of the ENSO. The Nino Index Phase Analysis (NIPA), developed by Zimmerman et al (2016), has shown potential in being able to predict this within phase variance that would otherwise go ignored in a composite analysis. This implies that current composite analysis is limiting the predictability of the effect of the ENSO variations on our climate and weather systems.
+Over the past several months, I have developed the tools necessary to look at within phase variations of the distribution of daily precipitation during phases of the ENSO, as opposed to seasonal totals. Using tools built to work with the NIPA methodology, we can observe within phase variations for the possible distribution of hydroclimatic variables, such as precipitation and temperature – however, the methodology is flexible enough to extend to other areas of interest, such as tornado frequency.
+
+METHODS
+In order to complete the proposed research the historical climate records needed to be organized by year and station. This was done in a Python module as well as additional statistical calculation capabilities. A separate program went through each division of the United States, pulling the data and calculating statistics during all the specified years and plotting them on a map. Separate plots were made for the Mean, Standard Deviation, and the Difference between the Mean in the Phase years and All the years. A summary is given below: 
+Using Nino Index Phase Analysis (NIPA)(Zimmerman, 2016) methodology, significant within-phase variations for precipitation distributions can be observed.  For this project a Python module was built that:
+-Locates weather stations that exist within a particular climate division
+-Extracts daily precipitation data based on the season and the phase
+-Selects data over any given threshold and compute standard deviation
+  	In order to compile relevant data and map it on a plot an additional Python module was built to generate useful data by:
+-Compiling a list of stations, phases, and thresholds and feeding these into the first Python module
+-Calculating the Mean and Standard Deviation and adding these statistics to data structures
+-Finding the differences in data between the baseline and each of the ENSO phases
+-Processing the data structure and building a map with divisions colored according to the respective data values
+
+CONCLUSION
+It is evident from the maps that during the El Nino phase divisions in the South-West United States receive above average precipitation while the North-East receives less than average. For the La Nina phase the results are below average precipitation in the South-West and above average precipitation in the North-East. These maps indicate what composite analysis has shown in terms of seasonal average of daily data. However, the flexibility of NIPA analysis makes it possible to look into the distributions of many daily data variables. This will help map large scale and daily weather seasonal variations, ultimately to better diagnose the connections between large scale climate anomalies and the resulting daily weather processes.
+By acknowledging within-phase ENSO variations and avoiding composite analysis, doors can be unlocked for many other variations, not only in the hydroclimatic variables, but potentially in other severe weather anomalies such as tornadoes. Forecasts could be extended, allowing people to be better prepared for these types of extreme events. Also, this will help insurance companies better allocate scarce resources as climate change intensifies extreme weather systems (Allan, 2008). 
+
+REFERENCES
+
+Ropelewski, Chester F., and Michael S. Halpert. "North American precipitation and temperature patterns associated with the El Niño/Southern Oscillation (ENSO)." Monthly Weather Review 114.12 (1986): 2352-2362
+
+Narasimhan K. Larkin,D.E. Harrison.”Global seasonal temperature and precipitation anomalies during El Niño autumn and winter”.GEOPHYSICAL RESEARCH LETTERS, VOL. 32, L16705, doi:10.1029/2005GL022860, 2005 
+				
+Zimmerman, Brian. G, Daniel J. Vimont, Paul J. Block, 2016: Utilizing the State of ENSO to assist in season-ahead predictor selection. Water Resources Research, in review.
+
+Allan, Richard P., and Brian J. Soden. "Atmospheric warming and the amplification of precipitation extremes." Science 321.5895 (2008): 1481-1484.
+
